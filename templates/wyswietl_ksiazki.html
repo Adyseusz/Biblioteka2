@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block sikorka %}
+    <ul>
+        {% for book in books %}
+            <li>
+            {% for data in book %}
+                {% if data != None %}
+                {{data}}
+                    {% else %}
+                    Autor Nieznany
+                {% endif %}
+            {% endfor %}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

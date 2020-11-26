@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block sikorka %}
+    <form method="post">
+        <p>tytuł: <input type="text" name="title"></p>
+        <p>Autor: <select name="author">
+            {% for author in authors %}
+                <option value="{{author.0}}">{{author.1}} {{author.2}}</option>
+            {% endfor %}
+        </select>
+        </p>
+        <p><input type="submit"></p>
+    </form>
+
+{% endblock %}
